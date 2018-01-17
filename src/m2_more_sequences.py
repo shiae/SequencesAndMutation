@@ -10,17 +10,17 @@ for ITERATING through SEQUENCES, including selections from:
   -- Looking at two sequences in parallel
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Allison Shi.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_shortest_string()
-    run_test_index_of_largest_number()
-    run_test_number_of_stutters()
-    run_test_is_palindrome()
-    run_test_count_same()
+    # run_test_index_of_largest_number()
+    # run_test_number_of_stutters()
+    # run_test_is_palindrome()
+    # run_test_count_same()
 
 
 # ----------------------------------------------------------------------
@@ -106,6 +106,14 @@ def shortest_string(strings):
     # TODO: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+
+    min_index = 0
+    for k in range(1, len(strings)):
+        if len(strings[k]) == len(strings[min_index]):
+            min_index = min_index
+        elif len(strings[k]) < len(strings[min_index]):
+            min_index = k
+        return strings[min_index]
 
 
 def run_test_index_of_largest_number():
