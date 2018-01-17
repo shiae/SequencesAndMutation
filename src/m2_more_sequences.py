@@ -16,8 +16,8 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_shortest_string()
-    # run_test_index_of_largest_number()
+    # run_test_shortest_string()
+    run_test_index_of_largest_number()
     # run_test_number_of_stutters()
     # run_test_is_palindrome()
     # run_test_count_same()
@@ -188,15 +188,17 @@ def index_of_largest_number(numbers, n):
 
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
-    # max_index = 0
-    # for k in range(n):
-    #     if len(numbers[k]) == len(numbers[max_index]):
-    #         max_index = max_index
-    #     elif len(numbers[k]) > len(numbers[max_index]):
+    max_index = 0
+    for k in range(n):
+        if numbers[k] <= numbers[max_index]:
+            max_index = max_index
+        else:
+            max_index = k
+    return max_index
 
 
 
