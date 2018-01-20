@@ -11,8 +11,8 @@ import m6_mutation
 
 
 def main():
-    run_test_RETURN_delete_negatives()
-    # run_test_MUTATE_delete_negatives()
+    # run_test_RETURN_delete_negatives()
+    run_test_MUTATE_delete_negatives()
 
 
 def run_test_RETURN_delete_negatives():
@@ -130,7 +130,7 @@ def MUTATE_delete_negatives(numbers):
 
     Precondition: The argument is a list of numbers.
     """
-    # TODO: 3. First, READ THE ABOVE TEST CODE.
+    # DONE: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          In particular, note how it calls the   run_test   function
     #          from the module   m6_mutation   by using the notation:
@@ -144,6 +144,12 @@ def MUTATE_delete_negatives(numbers):
     #       then see the solutions posted on Piazza.
     #       See those solutions even if your approach passes the tests.
 
+    j = 0
+    for k in range(len(numbers)):
+        if numbers[j] < 0:
+            del numbers[j]
+        else:
+            j = j + 1
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
